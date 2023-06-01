@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+.nav-item{
+  font-size: 20px;
+}
+footer a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+footer {
+  box-shadow: 0 2px 4px rgba(5, 5, 5, 0.2);
+  background-color:rgb(245, 60, 137);
+  /* background: linear-gradient(rgb(238, 43, 140),rgb(233, 130, 180)); */
+
+}
+  .navbar-brand{
+    font-family: 'Galada';font-size: 22px;
+   
+  }
+    .custom-navbar {
+    box-shadow: 0px 2px 4px rgba(250, 37, 144, 0.1); 
+    background-color: white;
+  }
+
+    .img-container {
+      width: 100%;
+    }
+    
+    .img-container img {
+      width: 100%;
+      height: auto;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color: rgb(238, 231, 231);"> 
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+    <div class="container">
+      <h2 class="navbar-brand" style="color: rgb(245, 60, 137); font-size: 50px;">SHINE</h2>
+      <button class="navbar-toggler navbar-toggler-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'home'%}">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{%url 'skin'%}">Skin</a>
+                <a class="dropdown-item" href="{%url 'hair'%}">Hair</a>
+                <a class="dropdown-item" href="{%url 'makeup'%}">Makeup</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'addtocart'%}">Cart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'whishlist'%}">Whishlist</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{%url 'account'%}">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'login'%}">Logout</a>
+            </li>
+          </ul>
+        <form class="form-inline my-2 my-lg-0" >
+          <input class="form-control mr-sm-2 custom-search-box" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn  my-2 my-sm-0" type="submit" style="background-color:rgb(245, 60, 137); color: white;">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
+      <section class="first" style="margin-top: 150px; margin-bottom: 10%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex">
+            <div class="card">
+              <img src="https://images-static.nykaa.com/media/catalog/product/2/9/29878e871249343326N_1.jpg" class="card-img-top" alt="Card Image">
+            </div>
+          </div>
+          <div class="col-md-6 d-flex">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">L'Oreal Paris Voluminous Lash Paradise Mascara - 204 Blackest Black
+                    (7.6ml)</h5>
+                <p class="card-text" style="font-size: large;font-weight: bold;">MRP:₹849
+                    <span style="color: rgb(14, 170, 0);">20% OFF</span></p>
+                    <p class="card-text">
+                        Explore the entire range of Mascara available on Shine. Shop more L'Oreal Paris products here.You can browse through the complete world of L'Oreal Paris Mascara .
+                        <br>
+                        <span style="font-size: large;font-weight: bold;">EXP Date:</span> 15 March 2025<br>
+                        <span style="font-size: large;font-weight: bold;"> Country of Origin: </span> United States of America (the)
+                        <br>
+                        Manufacturer:  L'Oreal Paris
+                        Address:  L'OREAL USA PRODUCTS - NORTH LITTLE ROCK MANUFACTURING, Arkansas, USA, 11500 Maybelline Road, North Little Rock, Arkansas, USA 72117
+                        </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn" style="background-color: rgb(245, 60, 137);color: white;"data-toggle="modal" data-target="#successModal1" >Whishlist</button>
+                        <button class="btn" style="background-color: rgb(245, 60, 137);color: white;"data-toggle="modal" data-target="#successModal">Add to Cart</button>
+                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="successModalLabel">Success</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  Product added to cart!
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn" data-dismiss="modal" style="background-color: rgb(245, 60, 137);color: white;">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="successModal1" tabindex="-1" role="dialog" aria-labelledby="successModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="successModalLabel">Success</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  Product added to whishlist!
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn" data-dismiss="modal" style="background-color: rgb(245, 60, 137);color: white;">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+      </section>
+     
+      <footer class="page-footer">
+
+   
+        <div class="container text-center text-md-left">
+      
+         
+          <div class="row">
+      
+           
+            <div class="col-md-3 mx-auto">
+      
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Useful links</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">services</a>
+                </li>
+                <li>
+                  <a href="{%url 'about'%}">About</a>
+                </li>
+                <li>
+                  <a href="{%url 'contact'%}">Contact</a>
+                </li>
+                <li>
+                  <a href="#!">projects</a>
+                </li>
+              </ul>
+      
+            </div>
+          
+      
+            <hr class="clearfix w-100 d-md-none">
+      
+         
+            <div class="col-md-3 mx-auto">
+      
+            
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Projects</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Residential Building Project</a>
+                </li>
+                <li>
+                  <a href="#!">Private Project</a>
+                </li>
+                <li>
+                  <a href="#!">Special Projects</a>
+                </li>
+                <li>
+                  <a href="#!">Commercial Project</a>
+                </li>
+              </ul>
+      
+            </div>
+           
+      
+            <hr class="clearfix w-100 d-md-none">
+      
+          
+            <div class="col-md-3 mx-auto">
+      
+            
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Services</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Virtual Designs</a>
+                </li>
+                <li>
+                  <a href="#!">Construction Services</a>
+                </li>
+                <li>
+                  <a href="#!">Preconstruction services</a>
+                </li>
+                <li>
+                  <a href="#!">Construction Services</a>
+                </li>
+              </ul>
+      
+            </div>
+        
+          </div>
+         
+      
+        </div>
+     </footer>
+      
+</body>
+</html>

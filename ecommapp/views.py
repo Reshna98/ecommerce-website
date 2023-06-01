@@ -1,0 +1,41 @@
+from django.shortcuts import render
+
+# Create your views here.
+def home(request):
+    return render(request,'home.html')
+def login(request):
+    return render(request,'login.html')
+def signup(request):
+    return render(request,'signup.html')
+def offer(request):
+    return render(request,'bestoffer.html')
+def cata(request):
+    return render(request,'cata.html')
+def skin(request):
+    return render(request,'skin.html')
+def hair(request):
+    return render(request,'hair.html')
+def makeup(request):
+    return render(request,'makeup.html')
+def contact(request):
+    return render(request,'contact.html')
+def about(request):
+    return render(request,'about.html')
+def addtocart(request):
+    return render(request,'addtocart.html')
+def checkout(request):
+    return render(request,'checkout.html')
+def lakme(request):
+    return render(request,'lakme.html')
+def loreal(request):
+    return render(request,'loreal.html')
+def foxt(request):
+    return render(request,'foxtaile.html')
+def msg(request):
+    return render(request,'sendmessage.html')
+def aboutus(request):
+    return render(request,'aboutus.html')
+def account(request):
+    return render(request,'account.html')
+def whishlist(request):
+    return render(request,'whishlist.html')

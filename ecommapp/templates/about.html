@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .nav-item{
+  font-size: 20px;
+}
+    .custom-divider {
+  border-top: 3px solid rgb(255, 106, 130);
+}
+    .navbar-brand {
+      font-family: 'Galada';
+      font-size: 22px;
+    }
+   .custom-navbar{
+    background-color: white;
+   }
+    .img {
+      height: 80px;
+    }
+
+    .category-link {
+      text-decoration: none;
+      color: black;
+    }
+
+    .category-card {
+    transition: transform 0.3s ease;
+   
+    }
+
+    .category-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+    <div class="container">
+      <h2 class="navbar-brand" style="color: rgb(245, 60, 137); font-size: 50px;">SHINE</h2>
+      <button class="navbar-toggler navbar-toggler-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="{%url 'home'%}">Home</a>
+            </li>
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{%url 'skin'%}">Skin</a>
+                <a class="dropdown-item" href="{%url 'hair'%}">Hair</a>
+                <a class="dropdown-item" href="{%url 'makeup'%}">Makeup</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'addtocart'%}">Cart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'whishlist'%}">Whishlist</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{%url 'account'%}">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'login'%}">Logout</a>
+            </li>
+          </ul>
+    
+        <form class="form-inline my-2 my-lg-0" >
+          <input class="form-control mr-sm-2 custom-search-box" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn  my-2 my-sm-0" type="submit" style="background-color:rgb(245, 60, 137); color: white;">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+  
+  <div class="container-fluid" style="height: 150px; margin-top: 10%;  background-color: rgb(245, 60, 137);">
+    <div class="row align-items-center d-flex justify-content-center h-100">
+      <div class="col-md-6">
+        <form class="form-inline">
+          <div class="input-group" style="width: 90%; padding-top: 10%;">
+            <input type="text" class="form-control" placeholder="Search FAQ">
+            <div class="input-group-append">
+              <button class="btn" style="background-color: rgb(211, 24, 102); color: white;" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="text-align: center;">
+    <h1>Help Categories</h1>
+  </div>
+
+  <section style="margin-top: 5%;">
+    <div class="container">
+      <div class="card-deck">
+        <div class="card">
+          <a href="{%url 'aboutus'%}">
+            <img src="https://support.nykaa.com/img/Others.png" alt="Category 1" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <a href="{%url 'aboutus'%}" class="category-link">About</a>
+          </div>
+        </div>
+        <!-- Repeat the same structure for the remaining categories -->
+        <div class="card">
+          <a href="category2.html">
+            <img src="https://support.nykaa.com/img/Payments.png" alt="Category 2" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <a href="category2.html" class="category-link"style="text-decoration: none;">Payment</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="{%url 'account'%}">
+            <img src="https://support.nykaa.com/img/Nykaa_Account.png" alt="Category 2" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <a href="{%url 'account'%}" class="category-link"style="text-decoration: none;">Account</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="{%url 'msg'%}">
+            <img src="https://support.nykaa.com/img/Write_to_us.png" alt="Category 2" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <a href="{%url 'msg'%}" class="category-link"style="text-decoration: none;">Contact</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="category2.html">
+            <img src="https://support.nykaa.com/img/Payments.png" alt="Category 2" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <a href="category2.html" class="category-link"style="text-decoration: none;">Payments</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="category2.html">
+            <img src="https://support.nykaa.com/img/Sell_on_Nykaa.png" alt="Category 2" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <a href="category2.html" class="category-link"style="text-decoration: none;">Sell</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </section>
+  <div class="container"> -->
+  <!-- <hr class="custom-divider">
+  <h5>EMAIL:Shine@gmail.com</h5>
+  <h5>Email for international orders: internationalsupport@shine.com</h5>
+
+  <hr class="custom-divider"> -->
+  <!-- </div> -->
+
+
+</body>
+</html>
+

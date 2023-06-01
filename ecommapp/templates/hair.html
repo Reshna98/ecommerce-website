@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+/* .fixed-card{
+  height: 400px;
+} */
+.nav-item{
+  font-size: 20px;
+}
+
+.card-link{
+  text-decoration: none;
+  color: black;
+
+}
+.card-link:hover {
+  text-decoration: none;
+  color: black;
+}
+footer a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+footer {
+ 
+  box-shadow: 0 2px 4px rgba(5, 5, 5, 0.2);
+  background-color:rgb(245, 60, 137); 
+  /* background: linear-gradient(rgb(238, 43, 140),rgb(233, 130, 180)); */
+
+}
+  .navbar-brand{
+    font-family: 'Galada';font-size: 22px;
+   
+  }
+    .custom-navbar {
+    box-shadow: 0px 2px 4px rgba(250, 37, 144, 0.1); 
+    background-color: white;
+  }
+
+    .img-container {
+      width: 100%;
+    }
+    
+    .img-container img {
+      width: 100%;
+      height: auto;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color: rgb(238, 231, 231);"> 
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+    <div class="container">
+      <h2 class="navbar-brand" style="color: rgb(245, 60, 137); font-size: 50px;">SHINE</h2>
+      <button class="navbar-toggler navbar-toggler-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'home'%}">Home</a>
+          </li>
+
+         
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{%url 'skin'%}">Skin</a>
+              <a class="dropdown-item" href="{%url 'hair'%}">Hair</a>
+              <a class="dropdown-item" href="{%url 'makeup'%}">Makeup</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'addtocart'%}">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'whishlist'%}">Whishlist</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{%url 'account'%}">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'login'%}">Logout</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" >
+          <input class="form-control mr-sm-2 custom-search-box" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn  my-2 my-sm-0" type="submit" style="background-color:rgb(245, 60, 137); color: white;">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
+    <section class="first" style="margin-top: 100px;">
+       
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images-static.nykaa.com/uploads/3d35a323-4463-4146-9048-0e556fb0de95.jpg?tr=w-1200,cm-pad_resize"class="d-block w-100" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images-static.nykaa.com/creatives/32979f70-ef82-453e-8ee7-deef7ac75092/default.jpg?tr=w-1200,cm-pad_resize" class="d-block w-100" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images-static.nykaa.com/uploads/ab7fb726-c343-4bc8-9fb6-5cf50db539ef.jpg?tr=w-1200,cm-pad_resize" class="d-block w-100" alt="Image 1">
+               
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="second" style="margin-top: 80px;">
+        <div class="container" style="text-align: center;">
+          <h1>BRANDS YOU WILL LOVE</h1>
+        </div>
+      <div class="container-fluid"> 
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <a href="{%url 'loreal'%}" class="card-link">
+            <div class="card">
+              <img src="https://images-static.nykaa.com/creatives/a08c93ac-91c7-46e1-b5a0-28c09365093b/default.jpg?tr=w-300,cm-pad_resize">
+              <div class="card-body">
+                <h4 class="card-title" style="color: rgb(253, 44, 166);">Flat 30% Off</h4>
+                <h5 class="card-text">
+                  On Entire Range!</h5>
+              </div>
+            </div>
+          </a>
+          </div>
+          <div class="col-md-4  mb-4">
+            <div class="card">
+              <img src="https://images-static.nykaa.com/creatives/708dc5b0-63bd-4894-928b-3744c3237f5b/default.jpg?tr=w-300,cm-pad_resize" class="card-img-top" alt="Image 2" style="height: 50%;">
+              <div class="card-body">
+                <h4 class="card-title" style="color: rgb(253, 44, 166);">Flat 30% Off</h4>
+                <h5 class="card-text">
+                  On Entire Range!</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="https://images-static.nykaa.com/creatives/9c344794-d627-429e-9eb7-c6e6b5e55039/default.jpg?tr=w-300,cm-pad_resize" class="card-img-top" alt="Image 3">
+              <div class="card-body">
+                <h4 class="card-title" style="color: rgb(253, 44, 166);">Flat 30% Off</h4>
+                <h5 class="card-text">
+                  On Entire Range!</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="https://images-static.nykaa.com/creatives/87b28249-3acb-402b-8167-4d49b8c27490/default.jpg?tr=w-300,cm-pad_resize" class="card-img-top" alt="Image 4">
+              <div class="card-body">
+                <h4 class="card-title" style="color: rgb(253, 44, 166);">Flat 30% Off</h4>
+                <h5 class="card-text">
+                  On Entire Range!</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="https://images-static.nykaa.com/creatives/c3352d2d-7468-4f48-9262-fde4c165b51d/default.jpg?tr=w-300,cm-pad_resize" class="card-img-top" alt="Image 5">
+              <div class="card-body">
+                <h4 class="card-title" style="color: rgb(253, 44, 166);">Flat 30% Off</h4>
+                <h5 class="card-text">
+                  On Entire Range!</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="https://images-static.nykaa.com/creatives/fbfa5dd6-03a1-4811-9019-eb380a85ee46/default.jpg?tr=w-300,cm-pad_resize" class="card-img-top" alt="Image 6">
+              <div class="card-body">
+                <h4 class="card-title" style="color: rgb(253, 44, 166);">Flat 30% Off</h4>
+                <h5 class="card-text">
+                  On Entire Range!</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>  
+      <!-- <section > -->
+        <!-- <div class="container" style="text-align: center;">
+          <h1>SHOP BY HAIR CONCERN</h1>
+        </div> -->
+        <section class="third" style="margin-top: 80px;">
+            <div class="container" style="text-align: center;">
+              <h1>SHOP BY HAIR CONCERN</h1>
+            </div>
+   
+        <div id="myCarousel" class="carousel slide card-carousel" data-ride="carousel">
+         
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
+        
+         
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://images-static.nykaa.com/uploads/97309aad-1485-4fb1-b19e-0f567b22a1d3.png?tr=w-400,cm-pad_resize" class="card-img-top" alt="Image 1">
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card 1</h5>
+                      <p class="card-text">Some text for card 1</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://images-static.nykaa.com/uploads/0fe03ced-f0d0-4791-a08d-f21da196a77e.png?tr=w-400,cm-pad_resize" class="card-img-top" alt="Image 2">
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card 2</h5>
+                      <p class="card-text">Some text for card 2</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://images-static.nykaa.com/uploads/6079aa3b-5991-4ac3-b343-a01060fc7707.png?tr=w-400,cm-pad_resize" class="card-img-top" alt="Image 3">
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card 3</h5>
+                      <p class="card-text">Some text for card 3</p>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://images-static.nykaa.com/uploads/0cd0bc07-04cb-41d6-82da-48b85ab5381d.png?tr=w-400,cm-pad_resize">
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card 4</h5>
+                      <p class="card-text">Some text for card 4</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://images-static.nykaa.com/uploads/6079aa3b-5991-4ac3-b343-a01060fc7707.png?tr=w-400,cm-pad_resize" class="card-img-top" alt="Image 5">
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card 5</h5>
+                      <p class="card-text">Some text for card 5</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://images-static.nykaa.com/uploads/6079aa3b-5991-4ac3-b343-a01060fc7707.png?tr=w-400,cm-pad_resize" class="card-img-top" alt="Image 6">
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card 6</h5>
+                      <p class="card-text">Some text for card 6</p>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div></div>
+        
+       
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div></div>
+     </section>  
+    <section class="second" style="margin-top: 80px;">
+        <div class="container" style="text-align: center;">
+          <h1>All Products</h1>
+        </div>
+        <div class="container-fluid">
+          <div class="row row-group">
+          
+            <div class="col-md-3 mb-4">
+              <a href=""class="card-link">
+              <div class="card fixed-card">
+                  <img src="https://images-static.nykaa.com/creatives/91be78bb-13b4-4225-b7d0-949b130d52fb/default.jpg?tr=w-300,cm-pad_resize"
+                    class="card-img-top" alt="Image 1">
+              
+                <div class="card-body">
+                  <h5 class="card-title">
+                    OFFER
+                    ★ 4.4/5 (12466)</h5>
+                    <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                      7.6ml</h5>
+                      <h5 class="card-text"> ₹656</h5>
+                      <div class="text-center">
+                        <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                        <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                      </div>
+                </div>
+              </div>
+            </a>
+            </div>
+            <div class="col-md-3 mb-4">
+              <a href="destination-page.html"class="card-link">
+              <div class="card fixed-card">
+              
+                  <img src="https://images-static.nykaa.com/creatives/cc67b296-ea35-402b-9738-8416f1c10666/default.jpg?tr=w-300,cm-pad_resize"
+                    class="card-img-top" alt="Image 1">
+              
+                <div class="card-body">
+                    <h5 class="card-title">
+                        OFFER
+                        ★ 4.4/5 (12466)</h5>
+                        <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                          7.6ml</h5>
+                          <h5 class="card-text"> ₹656</h5>
+                          <div class="text-center">
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                          </div>
+                  </div>
+              </div>
+            </a>
+            </div>
+            <div class="col-md-3 mb-4">
+              <a href="destination-page.html"class="card-link">
+              <div class="card fixed-card">
+                  <img
+                    src="https://images-static.nykaa.com/creatives/8103118a-ec43-4909-9c8d-9bd0b1ac731d/default.jpg?tr=w-300,cm-pad_resize"
+                    class="card-img-top" alt="Image 1">
+                
+                <div class="card-body">
+    
+                 
+                    <h5 class="card-title">
+                        OFFER
+                        ★ 4.4/5 (12466)</h5>
+                        <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                          7.6ml</h5>
+                          <h5 class="card-text"> ₹656</h5>
+                          <div class="text-center">
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                          </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-md-3 mb-4">
+              <a href="destination-page.html"class="card-link">
+              <div class="card fixed-card">
+               
+                  <img
+                    src="https://images-static.nykaa.com/creatives/02e36537-162c-40af-a835-08bef3681928/default.jpg?tr=w-300,cm-pad_resize"
+                    class="card-img-top" alt="Image 1">
+                
+                <div class="card-body  card-body">
+                    <h5 class="card-title">
+                        OFFER
+                        ★ 4.4/5 (12466)</h5>
+                        <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                          7.6ml</h5>
+                          <h5 class="card-text"> ₹656</h5>
+                          <div class="text-center">
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                          </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-md-3 mb-4">
+              <a href="destination-page.html"class="card-link">
+              <div class="card fixed-card">
+              
+                  <img src="https://images-static.nykaa.com/creatives/c6b03056-479c-4093-ae5b-e7fa3030a760/default.jpg?tr=w-300,cm-pad_resize"
+                    class="card-img-top" alt="Image 1">
+         
+                <div class="card-body">
+                    <h5 class="card-title">
+                        OFFER
+                        ★ 4.4/5 (12466)</h5>
+                        <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                          7.6ml</h5>
+                          <h5 class="card-text"> ₹656</h5>
+                          <div class="text-center">
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                          </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-md-3 mb-4">
+              <a href="destination-page.html"class="card-link">
+              <div class="card fixed-card">
+            
+                  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/a/7a3d329SOTRU00000004(1).jpg"
+                    class="card-img-top" alt="Image 1">
+           
+                <div class="card-body">
+                    <h5 class="card-title">
+                        OFFER
+                        ★ 4.4/5 (12466)</h5>
+                        <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                          7.6ml</h5>
+                          <h5 class="card-text"> ₹656</h5>
+                          <div class="text-center">
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                          </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-md-3 mb-4">
+              <a href="destination-page.html"class="card-link">
+              <div class="card fixed-card">
+               
+                  <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/4/8/4847b40DOTKE00000258-1.jpg"
+                    class="card-img-top" alt="Image 1">
+          
+                <div class="card-body">
+                    <h5 class="card-title">
+                        OFFER
+                        ★ 4.4/5 (12466)</h5>
+                        <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                          7.6ml</h5>
+                          <h5 class="card-text"> ₹656</h5>
+                          <div class="text-center">
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                          </div>
+                </div>
+              </div>
+             </a>
+            </div>
+      
+            <div class="col-md-3 mb-4">
+              <a href="destination-page.html"class="card-link">
+              <div class="card fixed-card">
+      
+                  <img
+                    src="https://images-static.nykaa.com/creatives/fd1af450-078f-466e-ab3f-8a9d5b13f3d2/default.jpg?tr=w-300,cm-pad_resize"
+                    class="card-img-top" alt="Image 8">
+                
+                <div class="card-body">
+                    <h5 class="card-title">
+                        OFFER
+                        ★ 4.4/5 (12466)</h5>
+                        <h5 class="card-text">L'Oreal Paris Paradise Mascara
+                          7.6ml</h5>
+                        <h5 class="card-text"> ₹656</h5>
+                        <div class="text-center">
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);border-color:  rgb(245, 60, 137);">Add to Cart</button>
+                            <button class="btn btn-primary" style="background-color:rgb(245, 60, 137);;border-color:  rgb(245, 60, 137);"> Add to Wishlist</button>
+                        </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+      </section>
+      <section>
+ 
+     </section>
+     <footer class="page-footer">
+      <div class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-3 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Useful links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Services</a>
+              </li>
+              <li>
+                <a href="{%url 'about'%}">About</a>
+              </li>
+              <li>
+                <a href="{%url 'contact'%}">Contact</a>
+              </li>
+              <li>
+                <a href="#!">Works</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="mt-3 mb-4">Contact Us</h5>
+                <p style="color: white;">
+                  1234 Street Name, City Name<br>
+                  Country<br>
+                  Email: info@example.com<br>
+                  Phone: +1 123-456-7890
+                </p>
+              </div>
+              <div class="col-md-6">
+                <h5 class="mt-3 mb-4">About Us</h5>
+                <p style="color: white;">
+                  1234 Street Name, City Name<br>
+                  Country<br>
+                  Email: info@example.com<br>
+                  Phone: +1 123-456-7890
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Services</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Return Service</a>
+              </li>
+              <li>
+                <a href="#!">Payment Policy</a>
+              </li>
+              <li>
+                <a href="#!">EMI</a>
+              </li>
+              <li>
+                <a href="#!">Damage Service</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+   
+    
+</body>
+</html>
